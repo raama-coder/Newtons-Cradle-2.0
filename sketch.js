@@ -49,11 +49,6 @@ function draw() {
 //   drawSprites();
 } 
 
-function keyPressed(){
-	if (keyCode===UP_ARROW){
-		Body.translate(ball1.body, {x:-200, y:-40})
-	}
-	if (keyCode===DOWN_ARROW){
-		Body.translate(ball5.body, {x:200, y:40})
-	}
+function mouseDragged(){
+	Matter.Body.setPosition(ball1.body, {x:mouseX, y:mouseY})
 }
